@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,19 @@ body{
     background-color: #F7E9DC;
 }
 
-hr{
-    margin-top: 2rem;
+hr {
+    /* margin-top: 2rem; */
+    height: 2px;
+    max-width: 93%;
+    margin: 2rem auto;
+    align-content: center;
+    border: none;
+    background-color: #F3ECE2;
+    border-radius: 10px;
 }
 
 
-.Mybalance{
+.Mybalance {
 
     width: 537px;
     height: 128px;
@@ -34,12 +41,13 @@ hr{
     align-items: center;
     color: white;
 }
-.balance-amount{
+
+.balance-amount {
 
     line-height: 2.5rem;
 }
 
-.balance-amount .amount{
+.balance-amount .amount {
 
     font-size: 30px;
 }
@@ -53,20 +61,23 @@ hr{
     border-radius: 20px;
     padding: 30px;
 }
-.spendingContainer > p{
+
+.spendingContainer>p {
 
     font-weight: 500;
     font-size: 30px;
     color: #392315;
     margin-bottom: 5rem;
+    font-weight: 600;
 }
+
 .spendingContainer .Bars {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.spendingContainer .Bars .bar-Container{
+.spendingContainer .Bars .bar-Container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -75,16 +86,39 @@ hr{
     position: relative;
 }
 
-.spendingContainer .Bars .bar{
+.spendingContainer .Bars .bar {
 
-    height: 150px; ;
+    height: 150px;
     width: 50px;
     background-color: #EC755D;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spendingContainer .Bars .bar:hover{
+
+    cursor: pointer;
+    background-color: #76B5BC;
+    transition: background-color 0.1s ease-in;
+}
+
+.spendingContainer .Bars .bar:hover::before {
+    content: '';
+    width: 60px;
+    
+    height: 25px;
+    background-color: red;
+    display: block;
+    position: absolute;
+    top: -2rem;
+    align-items: center;
+
 }
 
 
-.spendingContainer .Bars .bar-Container .bar1{
+.spendingContainer .Bars .bar-Container .bar1 {
 
     height: 50px;
 }
@@ -119,32 +153,39 @@ hr{
     height: 95px;
 }
 
-.spendingContainer .total{
+.spendingContainer .total {
 
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 
     margin-top: 3rem;
 }
 
-.spendingContainer .total .total-amount .amount{
+.spendingContainer .total .total-amount .amount {
 
     font-size: 43px;
     font-weight: 600;
     color: #39251A;
 }
 
-.spendingContainer .total .total-percentage{
+.spendingContainer .total .total-percentage {
 
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     align-self: baseline;
+
 }
 
-.spendingContainer .total .total-percentage .percentage{
+.spendingContainer .total .total-percentage .percentage {
     margin-top: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: #39251A;
+
 }
 
+.spendingContainer .total .total-percentage .last-month {
 
+    font-weight: 500;
+    font-size: 16px;
+} 
