@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+
+    --content: '85';
+}
+
 
 * {
     margin: 0;
@@ -97,7 +102,7 @@ hr {
     align-items: center;
 }
 
-.spendingContainer .Bars .bar:hover{
+.spendingContainer .Bars .bar:hover {
 
     cursor: pointer;
     background-color: #76B5BC;
@@ -105,16 +110,17 @@ hr {
 }
 
 .spendingContainer .Bars .bar:hover::before {
-    content: '';
-    width: 60px;
-    
-    height: 25px;
-    background-color: red;
+    content: var(--content);
+ 
+    background-color: #392315;
     display: block;
     position: absolute;
-    top: -2rem;
+    top: -2.5rem;
     align-items: center;
-
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    padding: 4px;
 }
 
 
@@ -188,4 +194,4 @@ hr {
 
     font-weight: 500;
     font-size: 16px;
-} 
+}
